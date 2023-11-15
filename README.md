@@ -36,7 +36,7 @@
 Склонируйте репозиторий с вашим приложением на свой компьютер:
 
 ```bash
-git clone https://github.com/SINikiforov/fast-api
+git clone <URL-репозитория>
 cd fast-api
 ```
 ## Инструкции по запуску
