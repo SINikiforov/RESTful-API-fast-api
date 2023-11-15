@@ -36,7 +36,7 @@
 Склонируйте репозиторий с вашим приложением на свой компьютер:
 
 ```bash
-git clone <URL-репозитория>
+git clone https://github.com/SINikiforov/fast-api.git
 cd fast-api
 ```
 ## Инструкции по запуску
@@ -52,6 +52,13 @@ docker-compose up --build
 docker-compose down
 ```
 
+## Инструкции по подключению к БД
+
+Для подключения к БД используйте команду:
+```bash
+docker exec -it app-postgres psql -U fastapi_quizz -d fastapi_quizz
+```
+
 ## Пример запроса к POST API
 
 Пример POST запроса для получения вопросов:
@@ -59,3 +66,4 @@ docker-compose down
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{"questions_num": 5}' http://localhost:8000/get_questions/
 ```
+Этот код запросит 5 случайных вопросов для викторины.
